@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>Sample Webcam Script</title>
+
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.cycle.all.js"></script>
+<script type="text/javascript" src="spatos.js"></script>
+
+
+<script type="text/javascript">
+$(function() {
+    var $ss = $('#slideshow');
+    
+    // add slides to slideshow (images 2-8)
+    for (var i = sequence; i < sequence+20; i++)
+        $ss.append('<img src="patos'+i+'.jpg" width="200" height="200" />');
+        $ss.append('<img src="recargar_patos.jpg" width="200" height="200" />');
+
+    // start the slideshow
+    $ss.cycle({
+        fx:     'fade',
+        speed:   100,
+        timeout: 3000,
+        autostop: 1
+    });
+});
+</script>
+
+</head>
+<body>
+    <div id="slideshow" class="pics">
+         <img src="cargando_patos.jpg" width="200" height="200" />
+    </div>
+
+</body>
+</html>
+

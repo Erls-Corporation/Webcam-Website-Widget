@@ -1,0 +1,29 @@
+Webcam Website Widget
+=====================
+
+Webcam Website Widget 0.1
+
+Webcam uploads jpg images to a folder in a linux server (./upload). After that, image_webcam.sh is processing that images, and using convert_webcam.php, adds watermark and timestamp.
+
+Using Javascript, it shows images as a slideshow, using "cache" and more real effect. In this way, it avoids people who visit webpage and don't close the browser.
+
+launch_script.sh deletes old files and launchs the full process, even after a reboot. 
+
+SAMPLE: http://www.waira.com
+
+Installation
+============
+
+- Uploads scripts to your webserver
+- Configure webcam to uploads images. Use timestamp configuration if possible.
+- Change image_yourwebcam.sh to the right path.
+- Change convert_yourwebcam.php (adapt it to your system).
+- Point your apache server to httpdocs (TIP: use lighhttp in a different port)
+- You can execute launch_script_now.sh but it's better use crontab to launch launch_script.sh
+
+TODO
+====
+
+- Don't use PHP.
+- Put controls in webpage (pause, continue, reload)
+- Wordpress integration
